@@ -669,7 +669,6 @@ th[sortable].desc:after {
 li a[aria-expanded="true"] span{
   color: #662D91 !important;
   font-weight: 700 !important;
-  font-size: 14px !important;
   line-height: 17px !important;
 }
 
@@ -709,4 +708,19 @@ li a[aria-expanded="true"] span{
 }
 .sidepanel .p-panelmenu-content .p-menuitem .p-menuitem-link{
   position: relative !important;
+}
+.sidepanel .p-panelmenu-content .p-menuitem .p-menuitem .p-menuitem-link {
+  background: #fff !important;
+}
+
+
+.p-panelmenu .p-panelmenu-content .p-submenu-list:not(.p-panelmenu-root-submenu){
+  border: 1px solid #dee2e6;
+}
+.p-panelmenu .p-panelmenu-content .p-menuitem .p-menuitem-link .p-panelmenu-icon{
+margin-left: -28px !important;
+}
+
+.sidepanel .p-panelmenu-content .p-menuitem .p-menuitem-link.p-menuitem-link-active {
+  background: #cbb1df  !important;
 }

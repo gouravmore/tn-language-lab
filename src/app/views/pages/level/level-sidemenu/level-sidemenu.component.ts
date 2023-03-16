@@ -1,5 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { MenuItem } from 'primeng/api';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LevelService } from '../level.service';
 //import * as collection from '../../../../../assets/jsons/level-sidemenu.json';
 
@@ -13,9 +14,24 @@ export class LevelSidemenuComponent implements OnInit {
   Items: any;
   //collection = (collection as any);
   //   Item: ({ label: string; icon: string; items: ({ label: string; icon: string; items: { label: string; icon: string; }[]; separator?: undefined; } | { label: string; icon: string; items?: undefined; separator?: undefined; } | { separator: boolean; label?: undefined; icon?: undefined; items?: undefined; })[]; } | { label: string; icon: string; items: ({ label: string; icon: string; items?: undefined; } | { label: string; icon: string; items: ({ label: string; items: { label: string; }[]; icon?: undefined; } | { label: string; icon: string; items?: undefined; })[]; })[]; })[];
-  constructor(public levelService: LevelService) { }
+  constructor(public levelService: LevelService, private route: ActivatedRoute, private _router: Router) { }
 
   ngOnInit(): void {
+    this.route.queryParams
+    .subscribe(params => {
+      if(params.lesson && params.topic){
+        this.levelService.getLesson(params.lesson, params.topic)
+      }else{
+        this._router.navigate(['/level'], {
+          queryParams: {
+            lesson: "speakWithMe",
+            topic: "lesson1"
+          }
+        });
+      }
+
+    }
+  );
     let instance = this;
     // this.Items = [collection];
     // let lessonArray = [];
@@ -36,9 +52,9 @@ export class LevelSidemenuComponent implements OnInit {
         id: "speakWithMe_unit",
         expanded: true,
         items: [
-          { label: 'Explore & Learn', command: () => this.levelService.getLesson("speakWithMe", "lesson1"), lid: "lesson1", pid: "speakWithMe", id: "speakWithMe_lesson1"},
-          { label: 'Play & Learn', command: () => this.levelService.getLesson("speakWithMe", "lesson2"), lid: "lesson2", pid: "speakWithMe", id: "speakWithMe_lesson2" },
-          { label: 'Learn with a Friend', command: () => this.levelService.getLesson("speakWithMe", "lesson3"), lid: "lesson3", pid: "speakWithMe", id: "speakWithMe_lesson3"}
+          { routerLink: ['/level'], queryParams: {lesson: 'speakWithMe', topic: "lesson1"}, label: 'Explore & Learn', lid: "lesson1", pid: "speakWithMe"},
+          { routerLink: ['/level'], queryParams: {lesson: 'speakWithMe',topic: "lesson2"}, label: 'Play & Learn', lid: "lesson2", pid: "speakWithMe"},
+          { routerLink: ['/level'], queryParams: {lesson: 'speakWithMe',topic: "lesson3"}, label: 'Learn with a Friend',lid: "lesson3", pid: "speakWithMe"}
         ]
       },
       {
@@ -51,12 +67,12 @@ export class LevelSidemenuComponent implements OnInit {
             lid: 'lesson1',
             id: 'lesson1_unit',
             items: [
-              { label: 'Describing Actions: What\'s in store today?', command: () => this.levelService.getLesson("lesson1", "introduction"), lid: "introduction", pid: "lesson1", id: "lesson1_introduction" },
-              { label: 'Warm Up', command: () => this.levelService.getLesson("lesson1", "warmup"), lid: "warmup", pid: "lesson1", id: "lesson1_warmup" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson1', topic: "introduction"}, label: 'Describing Actions: What\'s in store today?', lid: "introduction", pid: "lesson1"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson1', topic: "warmup"}, label: 'Warm Up', lid: "warmup", pid: "lesson1"},
               // { label: 'Picture Play', command: () => this.levelService.getLesson("lesson1", "pictureplay"), lid: "pictureplay", pid: "lesson1", id: "lesson1_pictureplay"},
-              { label: 'Open Story', command: () => this.levelService.getLesson("lesson1", "openstory"), lid: "openstory", pid: "lesson1", id: "lesson1_openstory"},
-              { label: 'Think and Write', command: () => this.levelService.getLesson("lesson1", "thinkandwrite"), lid: "thinkandwrite", pid: "lesson1", id: "lesson1_thinkandwrite" },
-              { label: 'Word Help', command: () => this.levelService.getLesson("lesson1", "wordhelp"), lid: "wordhelp", pid: "lesson1", id: "lesson1_wordhelp" }
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson1', topic: "openstory"}, label: 'Open Story', lid: "openstory", pid: "lesson1"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson1', topic: "thinkandwrite"}, label: 'Think and Write', lid: "thinkandwrite", pid: "lesson1"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson1', topic: "wordhelp"}, label: 'Word Help', lid: "wordhelp", pid: "lesson1"}
             ]
           },
           {
@@ -64,13 +80,13 @@ export class LevelSidemenuComponent implements OnInit {
             lid: 'lesson5',
             id: 'lesson5_unit',
             items: [
-              { label: 'Weather: What\'s in store today?', command: () => this.levelService.getLesson("lesson5", "introduction"), lid: "introduction", pid: "lesson5", id: "lesson5_t1"},
-              { label: 'Warm Up', command: () => this.levelService.getLesson("lesson5", "warmUp"), lid: "warmUp", pid: "lesson5", id: "lesson5_t2" },
-              { label: 'Word Play', command: () => this.levelService.getLesson("lesson5", "wordplay"), lid: "wordplay", pid: "lesson5", id: "lesson5_t3" },
-              { label: 'Picture Play', command: () => this.levelService.getLesson("lesson5", "pictureplay"), lid: "pictureplay", pid: "lesson5", id: "lesson5_t4" },
-              { label: 'Lets Talk', command: () => this.levelService.getLesson("lesson5", "letstalk"), lid: "letstalk", pid: "lesson5", id: "lesson5_t5" },
-              { label: 'Think and Write', command: () => this.levelService.getLesson("lesson5", "thinkandwrite"), lid: "thinkandwrite", pid: "lesson5", id: "lesson5_t6" },
-              { label: 'Word Help', command: () => this.levelService.getLesson("lesson5", "wordhelp"), lid: "wordhelp", pid: "lesson5", id: "lesson5_t7" }
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson5', topic: "introduction"}, label: 'Weather: What\'s in store today?', lid: "introduction", pid: "lesson5"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson5', topic: "warmUp"}, label: 'Warm Up', lid: "warmUp", pid: "lesson5"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson5', topic: "wordplay"}, label: 'Word Play', lid: "wordplay", pid: "lesson5"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson5', topic: "pictureplay"}, label: 'Picture Play', lid: "pictureplay", pid: "lesson5"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson5', topic: "letstalk"}, label: 'Lets Talk', lid: "letstalk", pid: "lesson5"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson5', topic: "thinkandwrite"}, label: 'Think and Write', lid: "thinkandwrite", pid: "lesson5"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson5', topic: "wordhelp"}, label: 'Word Help', lid: "wordhelp", pid: "lesson5"}
             ]
           },
           {
@@ -78,13 +94,13 @@ export class LevelSidemenuComponent implements OnInit {
             lid: "lesson6",
             id: 'lesson6_unit',
             items: [
-              { label: 'Location: What\'s in store today?', command: () => this.levelService.getLesson("lesson6", "introduction"), lid: "introduction", pid: "lesson6", id: "lesson6_t1" },
-              { label: 'Warm Up', command: () => this.levelService.getLesson("lesson6", "warmup"), lid: "warmup", pid: "lesson6", id: "lesson6_t2" },
-              { label: 'Word Play', command: () => this.levelService.getLesson("lesson6", "wordplay"), lid: "wordplay", pid: "lesson6", id: "lesson6_t3" },
-              { label: 'Picture Play', command: () => this.levelService.getLesson("lesson6", "pictureplay"), lid: "pictureplay", pid: "lesson6", id: "lesson6_t4" },
-              { label: 'Lets Talk', command: () => this.levelService.getLesson("lesson6", "letstalk"), lid: "letstalk", pid: "lesson6", id: "lesson6_t5" },
-              { label: 'Think and Write', command: () => this.levelService.getLesson("lesson6", "thinkandwrite"), lid: "thinkandwrite", pid: "lesson6", id: "lesson6_t6" },
-              { label: 'Word Help', command: () => this.levelService.getLesson("lesson6", "wordhelp"), lid: "wordhelp", pid: "lesson6", id: "lesson6_t7" }
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson6', topic: "introduction"}, label: 'Location: What\'s in store today?', lid: "introduction", pid: "lesson6"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson6', topic: "warmup"}, label: 'Warm Up', lid: "warmup", pid: "lesson6"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson6', topic: "wordplay"}, label: 'Word Play', lid: "wordplay", pid: "lesson6"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson6', topic: "pictureplay"}, label: 'Picture Play', lid: "pictureplay", pid: "lesson6"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson6', topic: "letstalk"}, label: 'Lets Talk', lid: "letstalk", pid: "lesson6"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson6', topic: "thinkandwrite"}, label: 'Think and Write', lid: "thinkandwrite", pid: "lesson6"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson6', topic: "wordhelp"}, label: 'Word Help', lid: "wordhelp", pid: "lesson6"}
             ]
           },
           {
@@ -244,7 +260,7 @@ export class LevelSidemenuComponent implements OnInit {
       })
     })
 
-    this.levelService.getLesson("speakWithMe", "lesson1")
+   // this.levelService.getLesson("speakWithMe", "lesson1")
 
     setTimeout(function () {
       console.log(instance.levelService.nextLessonData);

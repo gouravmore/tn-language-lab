@@ -34,7 +34,7 @@
           "audioSrc": "assets/lessons/lesson6/letstalk/audio/option2.mp3",
           "modelAudioSrc": "assets/lessons/lesson6/letstalk/audio/modelAns2.mp3",
           "modelImageSrc":"assets/lessons/lesson6/letstalk/images/modelAns2.png",
-          "modelAnsTranscript": "A: Can you see the girl? </br> B: Yes, I can.A: Where is she sitting? </br> B: She is sitting on a chair."
+          "modelAnsTranscript": "A: Can you see the girl? </br> B: Yes, I can.<br>A: Where is she sitting? </br> B: She is sitting on a chair."
         },
         {
           "imageSrc": "",

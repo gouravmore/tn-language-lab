@@ -9,7 +9,8 @@
 
       {
         "type": "video",
-        "content": "assets/lessons/lesson2-unit2/storytime/video/video1.mp4"
+        "content": "assets/lessons/lesson2-unit2/storytime/video/video1.mp4",
+        "subtitles": "assets/lessons/lesson2-unit2/storytime/video/subtitle.vtt"
     },
     {
       "type": "transcript",

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { TelemetryService } from '../../../telemetry.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,8 @@ export class LevelService {
   nextLessonId =  '';
   path;
   mechanic :any;
-  constructor(private httpService: HttpClient, public telemetryService: TelemetryService) { }
+  constructor(private httpService: HttpClient, public telemetryService: TelemetryService, private _route: ActivatedRoute,
+    private _router: Router) { }
 
   getJson(basePath,lid) {
     return this.httpService.get('../../../../assets/lessons/'+ basePath +'/'+lid+'/'+lid+'.json');
@@ -27,7 +29,12 @@ export class LevelService {
 
   playNextLesson(){
     this.currentLessonData = this.getNextLesson();
-    this.getLesson(this.currentLessonData.pid, this.currentLessonData.lid);
+    this._router.navigate(['/level'], {
+      queryParams: {
+        lesson: this.currentLessonData.pid,
+        topic: this.currentLessonData.lid
+      }
+    });
   }
 
   getNextLesson(){
@@ -46,7 +53,7 @@ export class LevelService {
 
   getLesson(basePath,lessonId){
     this.currentLessonData = {lid: lessonId, pid: basePath};
-    this.telemetryService.interact(lessonId);
+    this.telemetryService.interact(basePath+lessonId);
     console.log(lessonId);
     localStorage.setItem("basePath", JSON.stringify(basePath));
     localStorage.setItem("lessonId", JSON.stringify(lessonId));

@@ -8,7 +8,8 @@
       },
       {
           "type": "video",
-          "content": "assets/lessons/lesson3-unit2/storytime/video/1.mp4"
+          "content": "assets/lessons/lesson3-unit2/storytime/video/1.mp4",
+          "subtitles": "assets/lessons/lesson3-unit2/storytime/video/subtitle.vtt"
       },
       {
         "type": "transcript",
