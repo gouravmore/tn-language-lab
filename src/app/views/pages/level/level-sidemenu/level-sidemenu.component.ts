@@ -108,12 +108,12 @@ export class LevelSidemenuComponent implements OnInit {
             lid: "lesson8",
             id: 'lesson8_unit',
             items: [
-              { label: 'Feelings: What\'s in store today?', command: () => this.levelService.getLesson("lesson8", "introduction"), lid: "introduction", pid: "lesson8", id: "lesson8_t1"},
-              { label: 'Warm Up', command: () => this.levelService.getLesson("lesson8", "warmUp"), lid: "warmUp", pid: "lesson8", id: "lesson8_t2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson8', topic: "introduction"}, label: 'Feelings: What\'s in store today?', lid: "introduction", pid: "lesson8"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson8', topic: "warmUp"}, label: 'Warm Up', lid: "warmUp", pid: "lesson8"},
               // { label: 'Picture Play', command: () => this.levelService.getLesson("lesson8", "pictureplay"), lid: "pictureplay", pid: "lesson8", id: "lesson8_t3" },
-              { label: 'Lets Talk', command: () => this.levelService.getLesson("lesson8", "letstalk"), lid: "letstalk", pid: "lesson8", id: "lesson8_t4" },
-              { label: 'Think and Write', command: () => this.levelService.getLesson("lesson8", "thinkandwrite"), lid: "thinkandwrite", pid: "lesson8", id: "lesson8_t5" },
-              { label: 'Word Help', command: () => this.levelService.getLesson("lesson8", "wordhelp"), lid: "wordhelp", pid: "lesson8", id: "lesson8_t6" }
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson8', topic: "letstalk"}, label: 'Lets Talk', lid: "letstalk", pid: "lesson8"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson8', topic: "thinkandwrite"}, label: 'Think and Write', lid: "thinkandwrite", pid: "lesson8"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson8', topic: "wordhelp"}, label: 'Word Help', lid: "wordhelp", pid: "lesson8"}
             ]
           },
           {
@@ -121,12 +121,12 @@ export class LevelSidemenuComponent implements OnInit {
             lid: "lesson9",
             id: 'lesson9_unit',
             items: [
-              { label: 'Leisure: What\'s in store today?', command: () => this.levelService.getLesson("lesson9", "introduction"), lid: "introduction", pid: "lesson9", id: "lesson9_t1" },
-              { label: 'Warm Up', command: () => this.levelService.getLesson("lesson9", "warmUp"), lid: "warmUp", pid: "lesson9", id: "lesson9_t2" },
-              { label: 'Quiz Time', command: () => this.levelService.getLesson("lesson9", "pictureplay"), lid: "pictureplay", pid: "lesson9", id: "lesson9_t3" },
-              { label: 'Open Story', command: () => this.levelService.getLesson("lesson9", "openstory"), lid: "openstory", pid: "lesson9", id: "lesson9_t4" },
-              { label: 'Think and Write', command: () => this.levelService.getLesson("lesson9", "thinkandwrite"), lid: "thinkandwrite", pid: "lesson9", id: "lesson9_t5" },
-              { label: 'Word Help', command: () => this.levelService.getLesson("lesson9", "wordhelp"), lid: "wordhelp", pid: "lesson9", id: "lesson9_t6" }
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson9', topic: "introduction"}, label: 'Leisure: What\'s in store today?', lid: "introduction", pid: "lesson9"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson9', topic: "warmUp"}, label: 'Warm Up', lid: "warmUp", pid: "lesson9"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson9', topic: "pictureplay"}, label: 'Quiz Time', lid: "pictureplay", pid: "lesson9"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson9', topic: "openstory"}, label: 'Open Story', lid: "openstory", pid: "lesson9"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson9', topic: "thinkandwrite"}, label: 'Think and Write', lid: "thinkandwrite", pid: "lesson9"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson9', topic: "wordhelp"}, label: 'Word Help', lid: "wordhelp", pid: "lesson9"}
             ]
           }
         ]
@@ -141,11 +141,11 @@ export class LevelSidemenuComponent implements OnInit {
             lid: "lesson1-unit2",
             items: [
               // { label: 'What\'s in store today?', command: () => this.levelService.getLesson("lesson1-unit2", "review"), lid: "review", pid: "lesson1-unit2" },
-              { label: 'Introduction', command: () => this.levelService.getLesson("lesson1-unit2", "introduction"), lid: "introduction", pid: "lesson1-unit2" },
-              { label: 'Story Time: Under my Bed', command: () => this.levelService.getLesson("lesson1-unit2", "storytime"), lid: "storytime", pid: "lesson1-unit2" },
-              { label: 'Lets Talk', command: () => this.levelService.getLesson("lesson1-unit2", "letstalk"), lid: "letstalk", pid: "lesson1-unit2" },
-              { label: 'Think and Write', command: () => this.levelService.getLesson("lesson1-unit2", "thinkandwrite"), lid: "thinkandwrite", pid: "lesson1-unit2" },
-              { label: 'Word Help', command: () => this.levelService.getLesson("lesson1-unit2", "wordhelp"), lid: "wordhelp", pid: "lesson1-unit2" }
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson1-unit2', topic: "introduction"}, label: 'Introduction', lid: "introduction", pid: "lesson1-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson1-unit2', topic: "storytime"}, label: 'Story Time: Under my Bed', lid: "storytime", pid: "lesson1-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson1-unit2', topic: "letstalk"}, label: 'Lets Talk', lid: "letstalk", pid: "lesson1-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson1-unit2', topic: "thinkandwrite"}, label: 'Think and Write', lid: "thinkandwrite", pid: "lesson1-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson1-unit2', topic: "wordhelp"}, label: 'Word Help', lid: "wordhelp", pid: "lesson1-unit2" }
             ]
           },
           {
@@ -153,35 +153,35 @@ export class LevelSidemenuComponent implements OnInit {
             lid: "lesson2-unit2",
             items: [
               // { label: 'What\'s in store today?', command: () => this.levelService.getLesson("lesson2-unit2", "review"), id: "review", pid: "lesson2-unit2" },
-              { label: 'Introduction', command: () => this.levelService.getLesson("lesson2-unit2", "introduction"), lid: "introduction", pid: "lesson2-unit2" },
-              { label: 'Story Time: Ramya\'s Stars', command: () => this.levelService.getLesson("lesson2-unit2", "storytime"), lid: "storytime", pid: "lesson2-unit2" },
-              { label: 'Lets Talk', command: () => this.levelService.getLesson("lesson2-unit2", "letstalk"), lid: "letstalk", pid: "lesson2-unit2" },
-              { label: 'Open Story', command: () => this.levelService.getLesson("lesson2-unit2", "openstory"), lid: "openstory", pid: "lesson2-unit2" },
-              { label: 'Think and Write', command: () => this.levelService.getLesson("lesson2-unit2", "thinkandwrite"), lid: "thinkandwrite", pid: "lesson2-unit2" },
-              { label: 'Word Help', command: () => this.levelService.getLesson("lesson2-unit2", "wordhelp"), lid: "wordhelp", pid: "lesson2-unit2" }
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson2-unit2', topic: "introduction"}, label: 'Introduction', lid: "introduction", pid: "lesson2-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson2-unit2', topic: "storytime"}, label: 'Story Time: Ramya\'s Stars', lid: "storytime", pid: "lesson2-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson2-unit2', topic: "letstalk"}, label: 'Lets Talk', lid: "letstalk", pid: "lesson2-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson2-unit2', topic: "openstory"}, label: 'Open Story', lid: "openstory", pid: "lesson2-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson2-unit2', topic: "thinkandwrite"}, label: 'Think and Write', lid: "thinkandwrite", pid: "lesson2-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson2-unit2', topic: "wordhelp"}, label: 'Word Help', lid: "wordhelp", pid: "lesson2-unit2" }
             ]
           },
           {
             label: 'When Amma Went to School',
             lid: "lesson3-unit2",
             items: [
-              { label: 'Introduction', command: () => this.levelService.getLesson("lesson3-unit2", "introduction"), lid: "introduction", pid: "lesson3-unit2" },
-              { label: 'Story Time: When Amma Went to School', command: () => this.levelService.getLesson("lesson3-unit2", "storytime"), lid: "storytime", pid: "lesson3-unit2" },
-              { label: 'Open Story', command: () => this.levelService.getLesson("lesson3-unit2", "openstory"), lid: "openstory", pid: "lesson3-unit2" },
-              { label: 'Think and Write', command: () => this.levelService.getLesson("lesson3-unit2", "thinkandwrite"), lid: "thinkandwrite", pid: "lesson3-unit2" },
-              { label: 'Word Help', command: () => this.levelService.getLesson("lesson3-unit2", "wordhelp"), lid: "wordhelp", pid: "lesson3-unit2" }
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson3-unit2', topic: "introduction"}, label: 'Introduction', lid: "introduction", pid: "lesson3-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson3-unit2', topic: "storytime"}, label: 'Story Time: When Amma Went to School', lid: "storytime", pid: "lesson3-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson3-unit2', topic: "openstory"}, label: 'Open Story', lid: "openstory", pid: "lesson3-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson3-unit2', topic: "thinkandwrite"}, label: 'Think and Write', lid: "thinkandwrite", pid: "lesson3-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson3-unit2', topic: "wordhelp"}, label: 'Word Help', lid: "wordhelp", pid: "lesson3-unit2" }
             ]
           },
           {
             label: 'Brushing is No Fun!',
             lid: "lesson3-1-unit2",
             items: [
-              { label: 'Introduction', command: () => this.levelService.getLesson("lesson3-1-unit2", "introduction2"), lid: "introduction2", pid: "lesson3-1-unit2" },
-              { label: 'Story Time: Brushing is No Fun!', command: () => this.levelService.getLesson("lesson3-1-unit2", "storytime2"), lid: "storytime2", pid: "lesson3-1-unit2" },
-              { label: 'Word Play', command: () => this.levelService.getLesson("lesson3-1-unit2", "wordplay"), lid: "wordplay", pid: "lesson3-1-unit2" },
-              { label: 'Open Story', command: () => this.levelService.getLesson("lesson3-1-unit2", "openstory2"), lid: "openstory2", pid: "lesson3-1-unit2" },
-              { label: 'Think and Write', command: () => this.levelService.getLesson("lesson3-1-unit2", "thinkandwrite"), lid: "thinkandwrite", pid: "lesson3-1-unit2" },
-              { label: 'Word Help', command: () => this.levelService.getLesson("lesson3-1-unit2", "wordhelp"), lid: "wordhelp", pid: "lesson3-1-unit2" }
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson3-1-unit2', topic: "introduction2"}, label: 'Introduction', lid: "introduction2", pid: "lesson3-1-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson3-1-unit2', topic: "storytime2"}, label: 'Story Time: Brushing is No Fun!', lid: "storytime2", pid: "lesson3-1-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson3-1-unit2', topic: "wordplay"}, label: 'Word Play', lid: "wordplay", pid: "lesson3-1-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson3-1-unit2', topic: "openstory2"}, label: 'Open Story', lid: "openstory2", pid: "lesson3-1-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson3-1-unit2', topic: "thinkandwrite"}, label: 'Think and Write', lid: "thinkandwrite", pid: "lesson3-1-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson3-1-unit2', topic: "wordhelp"}, label: 'Word Help', lid: "wordhelp", pid: "lesson3-1-unit2" }
             ]
           },
           {
@@ -189,33 +189,33 @@ export class LevelSidemenuComponent implements OnInit {
             lid: "lesson5_1-unit2",
             items: [
               // { label: 'What\'s in store today?', command: () => this.levelService.getLesson("lesson5_1-unit2", "review"), lid: "review", pid: "lesson5_1-unit2" },
-              { label: 'Introduction', command: () => this.levelService.getLesson("lesson5_1-unit2", "introduction"), lid: "introduction", pid: "lesson5_1-unit2" },
-              { label: 'Story Time: Little Painters!', command: () => this.levelService.getLesson("lesson5_1-unit2", "storytime"), lid: "storytime", pid: "lesson5_1-unit2" },
-              { label: 'Lets Talk', command: () => this.levelService.getLesson("lesson5_1-unit2", "letstalk"), lid: "letstalk", pid: "lesson5_1-unit2" },
-              { label: 'Think and Write', command: () => this.levelService.getLesson("lesson5_1-unit2", "thinkandwrite"), lid: "thinkandwrite", pid: "lesson5_1-unit2" },
-              { label: 'Word Help', command: () => this.levelService.getLesson("lesson5_1-unit2", "wordhelp"), lid: "wordhelp", pid: "lesson5_1-unit2" }
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson5_1-unit2', topic: "introduction"}, label: 'Introduction', lid: "introduction", pid: "lesson5_1-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson5_1-unit2', topic: "storytime"}, label: 'Story Time: Little Painters!', lid: "storytime", pid: "lesson5_1-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson5_1-unit2', topic: "letstalk"}, label: 'Lets Talk', lid: "letstalk", pid: "lesson5_1-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson5_1-unit2', topic: "thinkandwrite"}, label: 'Think and Write', lid: "thinkandwrite", pid: "lesson5_1-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson5_1-unit2', topic: "wordhelp"}, label: 'Word Help', lid: "wordhelp", pid: "lesson5_1-unit2" }
             ]
           },
           {
             label: 'Bluie\'s World',
             lid: "lesson5_2-unit2",
             items: [
-              { label: 'Introduction', command: () => this.levelService.getLesson("lesson5_2-unit2", "introduction"), lid: "introduction", pid: "lesson5_2-unit2" },
-              { label: 'Story Time: Bluie\'s World!', command: () => this.levelService.getLesson("lesson5_2-unit2", "storytime"), lid: "storytime", pid: "lesson5_2-unit2" },
-              { label: 'Lets Talk', command: () => this.levelService.getLesson("lesson5_2-unit2", "letstalk"), lid: "letstalk", pid: "lesson5_2-unit2" },
-              { label: 'Think and Write', command: () => this.levelService.getLesson("lesson5_2-unit2", "thinkandwrite"), lid: "thinkandwrite", pid: "lesson5_2-unit2" },
-              { label: 'Word Help', command: () => this.levelService.getLesson("lesson5_2-unit2", "wordhelp"), lid: "wordhelp", pid: "lesson5_2-unit2" }
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson5_2-unit2', topic: "introduction"}, label: 'Introduction', lid: "introduction", pid: "lesson5_2-unit2"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson5_2-unit2', topic: "storytime"}, label: 'Story Time: Bluie\'s World!', lid: "storytime", pid: "lesson5_2-unit2"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson5_2-unit2', topic: "letstalk"}, label: 'Lets Talk', lid: "letstalk", pid: "lesson5_2-unit2"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson5_2-unit2', topic: "thinkandwrite"}, label: 'Think and Write', lid: "thinkandwrite", pid: "lesson5_2-unit2"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson5_2-unit2', topic: "wordhelp"}, label: 'Word Help', lid: "wordhelp", pid: "lesson5_2-unit2"}
             ]
           },
           {
             label: 'Samira\'s Awful Lunch',
             lid: "lesson7-unit2",
             items: [
-              { label: 'Introduction', command: () => this.levelService.getLesson("lesson7-unit2", "introduction2"), lid: "introduction2", pid: "lesson7-unit2" },
-              { label: 'Story Time: Samira\'s Awful Lunch', command: () => this.levelService.getLesson("lesson7-unit2", "storytime2"), lid: "storytime2", pid: "lesson7-unit2" },
-              { label: 'Quiz Time', command: () => this.levelService.getLesson("lesson7-unit2", "wordplay"), lid: "wordplay", pid: "lesson7-unit2" },
-              { label: 'Think and Write', command: () => this.levelService.getLesson("lesson7-unit2", "thinkandwrite"), lid: "thinkandwrite", pid: "lesson7-unit2" },
-              { label: 'Word Help', command: () => this.levelService.getLesson("lesson7-unit2", "wordhelp"), lid: "wordhelp", pid: "lesson7-unit2" }
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson7-unit2', topic: "introduction2"}, label: 'Introduction', lid: "introduction2", pid: "lesson7-unit2"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson7-unit2', topic: "storytime2"}, label: 'Story Time: Samira\'s Awful Lunch', lid: "storytime2", pid: "lesson7-unit2"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson7-unit2', topic: "wordplay"}, label: 'Quiz Time', lid: "wordplay", pid: "lesson7-unit2"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson7-unit2', topic: "thinkandwrite"}, label: 'Think and Write', lid: "thinkandwrite", pid: "lesson7-unit2"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson7-unit2', topic: "wordhelp"}, label: 'Word Help', lid: "wordhelp", pid: "lesson7-unit2"}
             ]
           },
           {
@@ -223,23 +223,23 @@ export class LevelSidemenuComponent implements OnInit {
             lid: "lesson6_1-unit2",
             items: [
               // { label: 'What\'s in store today?', command: () => this.levelService.getLesson("lesson6_1-unit2", "review"), lid: "review", pid: "lesson6_1-unit2" },
-              { label: 'Introduction', command: () => this.levelService.getLesson("lesson6_1-unit2", "introduction"), lid: "introduction", pid: "lesson6_1-unit2" },
-              { label: 'Story Time: Goodnight Tinku!', command: () => this.levelService.getLesson("lesson6_1-unit2", "storytime"), lid: "storytime", pid: "lesson6_1-unit2" },
-              { label: 'Lets Talk', command: () => this.levelService.getLesson("lesson6_1-unit2", "letstalk"), lid: "letstalk", pid: "lesson6_1-unit2" },
-              { label: 'Think and Write', command: () => this.levelService.getLesson("lesson6_1-unit2", "thinkandwrite"), lid: "thinkandwrite", pid: "lesson6_1-unit2" },
-              { label: 'Word Help', command: () => this.levelService.getLesson("lesson6_1-unit2", "wordhelp"), lid: "wordhelp", pid: "lesson6_1-unit2" }
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson6_1-unit2', topic: "introduction"}, label: 'Introduction', lid: "introduction", pid: "lesson6_1-unit2"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson6_1-unit2', topic: "storytime"}, label: 'Story Time: Goodnight Tinku!', lid: "storytime", pid: "lesson6_1-unit2"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson6_1-unit2', topic: "letstalk"}, label: 'Lets Talk', lid: "letstalk", pid: "lesson6_1-unit2"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson6_1-unit2', topic: "thinkandwrite"}, label: 'Think and Write', lid: "thinkandwrite", pid: "lesson6_1-unit2"},
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson6_1-unit2', topic: "wordhelp"}, label: 'Word Help', lid: "wordhelp", pid: "lesson6_1-unit2"}
             ]
           },
           {
             label: 'The Boy and the Drum',
             lid: "lesson6_2-unit2",
             items: [
-              { label: 'Introduction', command: () => this.levelService.getLesson("lesson6_2-unit2", "introduction"), lid: "introduction", pid: "lesson6_2-unit2" },
-              { label: 'Story Time: The Boy and the Drum', command: () => this.levelService.getLesson("lesson6_2-unit2", "storytime"), lid: "storytime", pid: "lesson6_2-unit2" },
-              { label: 'Lets Talk', command: () => this.levelService.getLesson("lesson6_2-unit2", "letstalk"), lid: "letstalk", pid: "lesson6_2-unit2" },
-              { label: 'Quiz Time', command: () => this.levelService.getLesson("lesson6_2-unit2", "clixtime"), lid: "clixtime", pid: "lesson6_2-unit2" },
-              { label: 'Think and Write', command: () => this.levelService.getLesson("lesson6_2-unit2", "thinkandwrite"), lid: "thinkandwrite", pid: "lesson6_2-unit2" },
-              { label: 'Word Help', command: () => this.levelService.getLesson("lesson6_2-unit2", "wordhelp"), lid: "wordhelp", pid: "lesson6_2-unit2" }
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson6_2-unit2', topic: "introduction"}, label: 'Introduction', lid: "introduction", pid: "lesson6_2-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson6_2-unit2', topic: "storytime"}, label: 'Story Time: The Boy and the Drum', lid: "storytime", pid: "lesson6_2-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson6_2-unit2', topic: "letstalk"}, label: 'Lets Talk', lid: "letstalk", pid: "lesson6_2-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson6_2-unit2', topic: "clixtime"}, label: 'Quiz Time', lid: "clixtime", pid: "lesson6_2-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson6_2-unit2', topic: "thinkandwrite"}, label: 'Think and Write', lid: "thinkandwrite", pid: "lesson6_2-unit2" },
+              { routerLink: ['/level'], queryParams: {lesson: 'lesson6_2-unit2', topic: "wordhelp"}, label: 'Word Help', lid: "wordhelp", pid: "lesson6_2-unit2" }
             ]
           }
         ]
