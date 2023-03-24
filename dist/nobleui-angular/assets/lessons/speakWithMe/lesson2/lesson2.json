@@ -1,9 +1,0 @@
-{
-  "title": "Play & Learn",
-  "id": "lesson2",
-  "data": [
-    {
-        "type": "iframe",
-        "content": "/assets/sb-all/index.html#/proto4/all?source=/assets/sb-all/db/proto4.json"
-    }
-]}

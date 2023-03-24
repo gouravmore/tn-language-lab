@@ -22,10 +22,7 @@ export class AppComponent implements OnInit {
       context: {
         mode: 'play',  // To identify preview used by the user to play/edit/preview
         authToken: '', // Auth key to make  api calls
-        sid: '7283cf2e-d215-9944-b0c5-269489c6fa56', // User sessionid on portal or mobile
-        did: '3c0a3724311fe944dec5df559cc4e006', // Unique id to identify the device or browser
         uid: 'anonymous', // Current logged in user id
-        channel: '505c7c48ac6dc1edc9b08f21db5a571d', // Unique id of the channel(Channel ID)
         pdata: {// optional
           id: 'langlab.portal', // Producer ID. For ex: For sunbird it would be "portal" or "genie"
           ver: '1.0.0', // Version of the App
