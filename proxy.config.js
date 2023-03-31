@@ -1,15 +1,9 @@
 const PROXY_CONFIG = [
     {
         context: [
-            "/content-plugins",
-            "/generic-editor",
-            "/content-editor",
-            "/action",
-            "/content",
-            "/api",
-            "/assets"
+            "/telemetry/upload"
         ],
-        "target": "https://dev.knowlg.sunbird.org/",
+        "target": 'http://localhost:4000',
         "secure": false,
         "logLevel": "debug",
         "changeOrigin": true
