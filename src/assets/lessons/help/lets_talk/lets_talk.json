@@ -1,0 +1,9 @@
+{
+  "title": "Lets Talk",
+  "id": "lets_talk",
+  "data": [
+    {
+        "type": "video",
+        "content": "/assets/lessons/help/lets_talk/lets_talk.mp4"
+    }
+]}

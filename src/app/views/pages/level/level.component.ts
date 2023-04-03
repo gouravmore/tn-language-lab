@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LevelService } from './level.service';
 import { TelemetryService } from '../../../telemetry.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-level',
@@ -8,10 +9,17 @@ import { TelemetryService } from '../../../telemetry.service';
   styleUrls: ['./level.component.scss']
 })
 export class LevelComponent implements OnInit {
-
-  constructor(public levelService: LevelService,  public telemetryService: TelemetryService) { }
+  lesson: string
+  topic: string
+  constructor(public levelService: LevelService,  public telemetryService: TelemetryService, private route: ActivatedRoute, private _router: Router) { }
 
   ngOnInit(): void {
+    this.route.queryParams
+    .subscribe(params => {
+      this.lesson = params.lesson
+      this.topic = params.topic
+    }
+  );
   }
 
   gotoNextpage(){

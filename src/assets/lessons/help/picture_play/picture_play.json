@@ -1,0 +1,9 @@
+{
+  "title": "Picture Play",
+  "id": "picture_play",
+  "data": [
+    {
+        "type": "video",
+        "content": "/assets/lessons/help/picture_play/picture_play.mp4"
+    }
+]}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { SpinnerComponent } from './views/component/spinnercomponent/spinner.component';
 import { TelemetryService } from './telemetry.service';
 import { LogsService } from './logs.service';
@@ -17,6 +17,19 @@ export class AppComponent implements OnInit {
     public telemetryService: TelemetryService,public logsService: LogsService
   ) {
   }
+  @HostListener('document:TelemetryEvent', ['$event'])
+  onTelemetryEvent(event) {
+    console.log('event===============', event);
+  }
+
+   /**
+   * dispatch telemetry window unload event before browser closes
+   * @param  event
+   */
+   @HostListener('window:beforeunload', ['$event'])
+   public beforeunloadHandler($event) {
+     this.telemetryService.end();
+   }
 
   ngOnInit() {
     console.log(environment)
@@ -46,7 +59,8 @@ export class AppComponent implements OnInit {
       metadata: {
       }
     });
-    console.log('telemetry');
-    this.telemetryService.start('langulagelab');
+    //
+    const duration = new Date().getTime();
+    this.telemetryService.start(duration);
   }
 }

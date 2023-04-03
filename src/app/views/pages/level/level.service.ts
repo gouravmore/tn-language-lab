@@ -53,7 +53,7 @@ export class LevelService {
 
   getLesson(basePath,lessonId){
     this.currentLessonData = {lid: lessonId, pid: basePath};
-    this.telemetryService.interact(basePath+lessonId);
+    this.telemetryService.impression("level", this._router.url);
     console.log(lessonId);
     localStorage.setItem("basePath", JSON.stringify(basePath));
     localStorage.setItem("lessonId", JSON.stringify(lessonId));

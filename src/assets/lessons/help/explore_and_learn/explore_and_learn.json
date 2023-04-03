@@ -1,0 +1,9 @@
+{
+  "title": "Explore and Learn",
+  "id": "explore_and_learn",
+  "data": [
+    {
+        "type": "video",
+        "content": "/assets/lessons/help/explore_and_learn/explore_and_learn.mp4"
+    }
+]}

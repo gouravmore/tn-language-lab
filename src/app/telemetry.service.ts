@@ -32,15 +32,14 @@ export class TelemetryService {
           authtoken: context.authToken || '',
           uid: context.uid || '',
           sid: context.sid,
-          batchsize: 5,
+          batchsize: 10,
           mode: context.mode,
           host: '',
-          apislug: '/telemetry/',
-          endpoint: 'upload',
+          apislug: '/telemetry',
+          endpoint: '/upload',
           tags: context.tags,
           cdata: [{ id: this.contentSessionId, type: 'ContentSession' },
-          { id: this.playSessionId, type: 'PlaySession' },
-          {id: '2.0' , type: 'PlayerVersion'}]
+          { id: this.playSessionId, type: 'PlaySession' }]
         },
         userOrgDetails: {}
       };
@@ -74,19 +73,18 @@ export class TelemetryService {
       edata: {
         type: 'content',
         mode: 'play',
-        pageid: 'sunbird-player-Endpage',
-        summary: [],
-        duration: '000'
+        pageid: 'language-lab',
+        summary: []
       },
       options: this.getEventOptions()
     });
 
   }
 
-  public interact(id) {
+  public interact(id, currentPage) {
     CsTelemetryModule.instance.telemetryService.raiseInteractTelemetry({
       options: this.getEventOptions(),
-      edata: { type: 'TOUCH', subtype: '', id, pageid: id }
+      edata: { type: 'TOUCH', subtype: '', id, pageid: currentPage + '' }
     });
   }
 
@@ -105,10 +103,10 @@ export class TelemetryService {
     });
   }
 
-  public impression(currentPage) {
+  public impression(currentPage, uri) {
     CsTelemetryModule.instance.telemetryService.raiseImpressionTelemetry({
       options: this.getEventOptions(),
-      edata: { type: 'workflow', subtype: '', pageid: currentPage + '', uri: '' }
+      edata: { type: 'workflow', subtype: '', pageid: currentPage + '', uri: uri}
     });
   }
 
@@ -133,8 +131,7 @@ export class TelemetryService {
         sid: this.context.sid,
         uid: this.context.uid,
         cdata: [{ id: this.contentSessionId, type: 'ContentSession' },
-        { id: this.playSessionId, type: 'PlaySession' },
-        {id: '2.0' , type: 'PlayerVersion'}],
+        { id: this.playSessionId, type: 'PlaySession' }],
         rollup: this.context.contextRollup || {}
       }
     });

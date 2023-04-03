@@ -1,0 +1,9 @@
+{
+  "title": "Open Story",
+  "id": "open_story",
+  "data": [
+    {
+        "type": "video",
+        "content": "/assets/lessons/help/open_story/open_story.mp4"
+    }
+]}

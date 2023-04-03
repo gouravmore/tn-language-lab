@@ -1,0 +1,9 @@
+{
+  "title": "Let's Get Started!",
+  "id": "lets_get_started",
+  "data": [
+    {
+        "type": "video",
+        "content": "assets/lessons/help/lets_get_started/lets_get_started.mp4"
+    }
+]}

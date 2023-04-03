@@ -666,11 +666,6 @@ th[sortable].desc:after {
   position: absolute;
   right: 26px;
 }
-li a[aria-expanded="true"] span{
-  color: #662D91 !important;
-  font-weight: 700 !important;
-  line-height: 17px !important;
-}
 
 .owl-carousel .owl-nav .owl-prev{
   background: #662D91 !important;
@@ -723,4 +718,7 @@ margin-left: -28px !important;
 
 .sidepanel .p-panelmenu-content .p-menuitem .p-menuitem-link.p-menuitem-link-active {
   background: #cbb1df  !important;
+  color: #662D91 !important;
+  font-weight: 700 !important;
+  line-height: 17px !important;
 }

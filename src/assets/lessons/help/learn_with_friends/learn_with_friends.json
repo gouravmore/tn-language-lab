@@ -1,0 +1,9 @@
+{
+  "title": "Learn with Friends",
+  "id": "learn_with_friends",
+  "data": [
+    {
+        "type": "video",
+        "content": "/assets/lessons/help/learn_with_friends/learn_with_friends.mp4"
+    }
+]}

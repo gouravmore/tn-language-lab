@@ -17,7 +17,7 @@
             <app-view-lesson [lessonData]="levelService?.lessonData"></app-view-lesson>
           </div>
           <div class="text-center">
-            <button class="px-5 py-3 rounded bg-primary border-0 text-white fs-4 mt-5" (click)="levelService.playNextLesson()" *ngIf="levelService?.lessonData">Next</button>
+            <button class="px-5 py-3 rounded bg-primary border-0 text-white fs-4 mt-5" (click)="levelService.playNextLesson(); telemetryService.interact('next-button', 'level')" *ngIf="levelService?.lessonData">Next</button>
             <button class="px-5 py-3 rounded bg-primary border-0 text-white fs-4 mt-5" (click)="levelService.playNextLesson()" *ngIf="!levelService?.lessonData">Start</button>
           </div>
             <!-- <app-level-viewpart></app-level-viewpart> -->
